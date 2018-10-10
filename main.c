@@ -2,7 +2,7 @@
 #include <malloc.h>
 
 
-void findMinValue(int *p, int n) {
+int findMinValue(int *p, int n) {
     int *min = p;
     for (int i = 0; i < n - 1; ++i) {
         for (int j = i + 1; j < n; ++j) {
@@ -11,22 +11,10 @@ void findMinValue(int *p, int n) {
             }
         }
     }
-    printf("%d\n", *min);
+    return *min;
 }
 
-//void findMinValue(int *p, int n) {
-//    int min = 0 ;
-//    for (int i = 0; i < n - 1; i++) {
-//        min =  *(p + i);
-//        for (int j = i + 1; j < n ; j++) {
-//            if (*(p+j) > min) {
-//                min = *(p + j);
-//            }
-//        }
-//    }
-//    printf("%d\n", min);
-//}
-void findMaxValue(int *p, int n) {
+int findMaxValue(int *p, int n) {
     int *max = p;
     for (int i = 0; i < n - 1; ++i) {
         for (int j = i + 1; j < n; ++j) {
@@ -34,9 +22,8 @@ void findMaxValue(int *p, int n) {
                 *(max + i) = *(p + j);
             }
         }
-
     }
-    printf("%d\n", *max);
+    return *max;
 }
 
 
@@ -62,7 +49,7 @@ void menu() {
 }
 
 int main() {
-    int *p, n, choice;
+    int *p, n, choice, max, min;
     printf("Nhap so luong phan tu cua mang: \n");
     scanf("%d", &n);
     p = (int *) malloc(n * sizeof(int));
@@ -76,12 +63,14 @@ int main() {
         scanf("%d", &choice);
         switch (choice) {
             case 1 :
+                max = findMaxValue(p, n);
                 printf("So lon nhat trong mang la: \n");
-                findMaxValue(p, n);
+                printf("%d\n", max);
                 break;
             case 2 :
+                min = findMinValue(p, n);
                 printf("So nho nhat trong mang la: \n");
-                findMinValue(p, n);
+                printf("%d\n", min);
                 break;
             case 3 :
                 printf("Tam biet!\n");
