@@ -1,0 +1,3 @@
+C:/Users/namku/CLionProjects/Bai3-TimSLNvaSNN/cmake-build-debug/CMakeFiles/Bai3_TimSLNvaSNN.dir
+C:/Users/namku/CLionProjects/Bai3-TimSLNvaSNN/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/namku/CLionProjects/Bai3-TimSLNvaSNN/cmake-build-debug/CMakeFiles/rebuild_cache.dir
